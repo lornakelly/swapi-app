@@ -3,6 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import loadable from "@loadable/component";
 
 import GlobalStyle from "./shared/styles/base/global";
+import Characters from "./components/Characters/Characters";
 
 const Header = loadable(() => import("./components/Header/Header"));
 const MovieList = loadable(() => import("./components/MovieList/MovieList"));
@@ -20,6 +21,9 @@ export default function App() {
         </Route>
         <Route path="/">
           <MovieList />
+        </Route>
+        <Route path="/">
+          <Characters />
         </Route>
       </Switch>
       <GlobalStyle />
